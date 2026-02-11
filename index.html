@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolyBytes Pro - High Performance Storage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>HolyBytes CLI Web 🚀</h1>
+        <p>Armazenamento esteganográfico de alta performance.</p>
+        
+        <div class="config-bar">
+            <label>Tema do Dicionário:</label>
+            <select id="themeSelector" onchange="initDictionary()">
+                <option value="apostolos">Apóstolos & Bíblia</option>
+                <option value="quimica">Elementos Químicos</option>
+                <option value="espaco">Planetas & Estrelas</option>
+            </select>
+        </div>
+
+        <div class="mode-selector">
+            <button onclick="setMode('encode')" id="btnEncode" class="active">Encode</button>
+            <button onclick="setMode('decode')" id="btnDecode">Decode</button>
+        </div>
+
+        <div id="dropZone" class="drop-zone">
+            <div id="fileStatus">Arraste seu arquivo (JPG, PDF, ZIP...) ou clique aqui</div>
+            <input type="file" id="fileInput" hidden>
+        </div>
+
+        <div id="progressBarContainer" style="display:none; margin: 10px 0; background: #eee; border-radius: 5px; overflow: hidden;">
+            <div id="progressBar" style="width: 0%; height: 10px; background: #6e8efb; transition: width 0.1s;"></div>
+        </div>
+        
+        <div id="statusMessage">Aguardando...</div>
+
+        <div class="text-area-group">
+            <label for="outputArea">Manuscrito (Base64/GZIP):</label>
+            <textarea id="outputArea" placeholder="O resultado aparecerá aqui..."></textarea>
+        </div>
+        
+        <button id="mainBtn" class="main-action" onclick="handleAction()">Processar e Baixar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

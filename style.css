@@ -1,0 +1,13 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 40px; margin: 0; }
+.container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 100%; max-width: 600px; text-align: center; }
+.config-bar { margin-bottom: 20px; text-align: left; background: #f8f9fa; padding: 10px; border-radius: 8px; }
+.mode-selector { display: flex; gap: 10px; margin-bottom: 20px; }
+.mode-selector button { flex: 1; padding: 12px; border: none; background: #e4e6eb; cursor: pointer; border-radius: 6px; font-weight: bold; }
+.mode-selector button.active { background: #6e8efb; color: white; }
+.drop-zone { border: 2px dashed #cbd5e0; padding: 40px; border-radius: 10px; cursor: pointer; margin-bottom: 20px; transition: 0.2s; }
+.drop-zone:hover { border-color: #6e8efb; background: #f7fafc; }
+#statusMessage { font-size: 14px; margin-bottom: 10px; color: #4a5568; }
+.text-area-group { text-align: left; }
+textarea { width: 100%; height: 120px; border-radius: 6px; border: 1px solid #ddd; padding: 10px; font-family: monospace; font-size: 12px; margin-top: 5px; box-sizing: border-box; }
+.main-action { width: 100%; padding: 15px; border: none; background: #28a745; color: white; font-size: 16px; border-radius: 6px; cursor: pointer; margin-top: 20px; font-weight: bold; }
+.main-action:hover { background: #218838; }
